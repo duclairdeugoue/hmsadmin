@@ -8,6 +8,6 @@ class Activities extends BaseController
 {
     public function index()
     {
-        //
+        echo view('activities/activities');
     }
 }
