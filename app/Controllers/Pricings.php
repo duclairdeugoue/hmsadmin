@@ -8,6 +8,6 @@ class Pricings extends BaseController
 {
     public function index()
     {
-        //
+        echo view('pricings/pricings');
     }
 }

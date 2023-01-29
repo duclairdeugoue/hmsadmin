@@ -45,7 +45,7 @@ $routes->group('auth', static function ($routes) {
     $routes->get('login', 'Auth::login');
     $routes->get('register', 'Auth::register');
     $routes->get('logout', 'Auth::logout');
-    $routes->get('forget-password', 'Auth::forget_password');
+    $routes->get('forget_password', 'Auth::forgetPassword');
 });
 
 $routes->group('accounts', static function ($routes) {
@@ -76,16 +76,16 @@ $routes->group('customers', static function ($routes) {
 });
 
 $routes->group('employees', static function ($routes) {
+    $routes->get('list', 'Employees::list');
     $routes->get('attendance', 'Employees::attedance');
     $routes->get('holidays', 'Employees::holidays');
     $routes->get('leaves', 'Employees::leaves');
-    $routes->get('list', 'Employees::list');
 });
 
-$routes->group('error-page', static function ($routes) {
-    $routes->get('error-404', 'Errorpage::notFoundPage');
-    $routes->get('error-505', 'Errorpage::serverError');
-});
+// $routes->group('error-page', static function ($routes) {
+//     $routes->get('error-404', 'Errorpage::notFoundPage');
+//     $routes->get('error-505', 'Errorpage::serverError');
+// });
 
 $routes->group('pricings', static function ($routes) {
     $routes->get('pricings', 'Pricings::index');
