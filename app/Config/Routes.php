@@ -58,7 +58,7 @@ $routes->group('activities', static function ($routes) {
 });
 
 $routes->group('bookings', static function ($routes) {
-    $routes->get('all', 'bookings::index');
+    $routes->get('all', 'bookings::all');
     $routes->get('add', 'bookings::add');
     $routes->get('edit', 'bookings::edit');
 });
@@ -68,7 +68,7 @@ $routes->group('calender', static function ($routes) {
 });
 
 $routes->group('customers', static function ($routes) {
-    $routes->get('all', 'Customers::index');
+    $routes->get('all', 'Customers::all');
     $routes->get('add', 'Customers::add');
     $routes->get('edit', 'Customers::edit');
 });
