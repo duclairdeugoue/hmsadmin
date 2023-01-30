@@ -2,7 +2,7 @@
   <div class="sidebar-inner slimscroll">
     <div id="sidebar-menu" class="sidebar-menu">
       <ul>
-        <li class="<?php if (url_is('/accounts/invoices')) : ?>active<?php endif ?>"> <a href="<?= base_url() ?>/dashboard/dashboard"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
+        <li class="<?php if (url_is('/dashboard/dashboard')) : ?>active<?php endif ?>"> <a href="<?= base_url() ?>/dashboard/dashboard"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a> </li>
         <li class="list-divider"></li>
         <li class="submenu"> <a href="<?= base_url() ?>/bookings"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
@@ -14,8 +14,8 @@
         <li class="submenu"> <a href="<?= base_url() ?>/customers"><i class="fas fa-user"></i> <span> Customers </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a class="<?php if (url_is('/customers/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/customers/all"> All customers </a></li>
-            <li><a class="<?php if (url_is('/customers/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/customers/edit"> Edit Customer </a></li>
-            <li><a class="<?php if (url_is('/customers/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/customers/add"> Add Customer </a></li>
+            <li><a class="<?php if (url_is('/customers/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/customers/edit"> Edit Customer </a></li>
+            <li><a class="<?php if (url_is('/customers/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/customers/add"> Add Customer </a></li>
           </ul>
         </li>
         <li class="submenu"> <a href="<?= base_url() ?>/rooms"><i class="fas fa-key"></i> <span> Rooms </span> <span class="menu-arrow"></span></a>
@@ -75,7 +75,7 @@
             <li><a class="<?php if (url_is('/salary')) : ?>active<?php endif ?>" href="<?= base_url() ?>salary-veiw">Payslip </a></li>
           </ul>
         </li>
-        <li> <a href="<?= base_url() ?>/calender/calendar"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a> </li>
+        <li class="<?php if (url_is('/calender/calender')) : ?>active<?php endif ?>"> <a href="<?= base_url() ?>/calender/calender"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a> </li>
         <li class="submenu"> <a href="<?= base_url() ?>/blog"><i class="fe fe-table"></i> <span> Blog </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a class="<?php if (url_is('/blog/blog')) : ?>active<?php endif ?>" href="<?= base_url() ?>/blog/blog">Blog </a></li>

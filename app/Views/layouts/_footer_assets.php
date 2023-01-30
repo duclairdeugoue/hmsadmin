@@ -1,4 +1,4 @@
-<script data-cfasync="false" src="<?= base_url() ?>/../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<!-- <script data-cfasync="false" src="<?= base_url() ?>/../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script> -->
 
 <script src="<?= base_url() ?>/assets/js/jquery-3.5.1.min.js"></script>
 

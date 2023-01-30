@@ -193,7 +193,6 @@
 </div>
 
 <script>
-  console.log("Testing javascript");
 </script>
 
 <?= $this->endSection() ?>
