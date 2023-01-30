@@ -32,7 +32,7 @@
             <li><a class="<?php if (url_is('/staffs/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/staffs/add"> Add Staff </a></li>
           </ul>
         </li>
-        <li> <a href="<?= base_url() ?>/pricing/pricing"><i class="far fa-money-bill-alt"></i> <span>Pricing</span></a> </li>
+        <li class="<?php if (url_is('/pricings/all')) : ?>active<?php endif ?>"> <a href="<?= base_url() ?>/pricings/all"><i class="far fa-money-bill-alt"></i> <span>Pricing</span></a> </li>
         <li class="submenu"> <a href="<?= base_url() ?>/sharings"><i class="fas fa-share-alt"></i> <span> Apps </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a href="<?= base_url() ?>chat"><i class="fas fa-comments"></i><span> Chat </span></a></li>

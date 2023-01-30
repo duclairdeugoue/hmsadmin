@@ -88,7 +88,9 @@ $routes->group('employees', static function ($routes) {
 // });
 
 $routes->group('pricings', static function ($routes) {
-    $routes->get('pricings', 'Pricings::index');
+    $routes->get('all', 'Pricings::index');
+    $routes->get('add', 'Pricings::add');
+    $routes->get('edit', 'Pricings::edit');
 });
 
 $routes->group('profile', static function ($routes) {
