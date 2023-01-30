@@ -18,6 +18,7 @@
     </div>
   </div>
   <?= $this->include('layouts/_footer_assets') ?>
+
 </body>
 
 </html>
