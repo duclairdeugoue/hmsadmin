@@ -1,6 +1,13 @@
 <?= $this->extend('layouts/app') ?>
-<?= $this->section('content') ?>
 
+<?= $this->section('styles') ?>
+<style>
+  
+</style>
+<?= $this->endSection()  ?>
+
+
+<?= $this->section('content') ?>
 <div class="content container-fluid">
   <div class="page-header">
     <div class="row">
@@ -202,5 +209,11 @@
     </div>
   </div>
 </div>
-
 <?= $this->endSection() ?>
+
+
+<?= $this->section('scripts') ?>
+<script>
+  console.log("testing");
+</script>
+<?= $this->endSection()  ?>
