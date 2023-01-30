@@ -27,9 +27,9 @@
         </li>
         <li class="submenu"> <a href="<?= base_url() ?>/staffs"><i class="fas fa-user"></i> <span> Staff </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
-            <li><a class="<?php if (url_is('/staffs/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/staff/all">All Staff </a></li>
-            <li><a class="<?php if (url_is('/staffs/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/staff/edit"> Edit Staff </a></li>
-            <li><a class="<?php if (url_is('/staffs/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/staff/add"> Add Staff </a></li>
+            <li><a class="<?php if (url_is('/staffs/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/staffs/all">All Staff </a></li>
+            <li><a class="<?php if (url_is('/staffs/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/staffs/edit"> Edit Staff </a></li>
+            <li><a class="<?php if (url_is('/staffs/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/staffs/add"> Add Staff </a></li>
           </ul>
         </li>
         <li> <a href="<?= base_url() ?>/pricing/pricing"><i class="far fa-money-bill-alt"></i> <span>Pricing</span></a> </li>
