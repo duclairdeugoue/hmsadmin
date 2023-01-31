@@ -55,9 +55,9 @@
         <li class="submenu"> <a href="<?= base_url() ?>/employees"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a class="<?php if (url_is('/employees/all') || url_is('/employees/add') || url_is('/employees/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/employees/all">Employees List </a></li>
-            <li><a class="<?php if (url_is('/employees/leaves/all') || url_is('/employees/leaves/add') || url_is('/employees/leaves/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/employees/leaves/all">Leaves </a></li>
-            <li><a class="<?php if (url_is('/employees/holidays/all') || url_is('/employees/add') || url_is('/employees/holidays/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/employees/holidays/all">Holidays </a></li>
-            <li><a class="<?php if (url_is('/employees/attendance/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/employees/attendance/all">Attendance </a></li>
+            <li><a class="<?php if (url_is('/employees/leaves/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/employees/leaves/all">Leaves </a></li>
+            <li><a class="<?php if (url_is('/employees/holidays/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/employees/holidays/all">Holidays </a></li>
+            <li><a class="<?php if (url_is('/employees/attendance/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/employees/attendance/all">Attendance </a></li>
           </ul>
         </li>
         <li class="submenu"> <a href="<?= base_url() ?>/accounts"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
