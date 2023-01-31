@@ -12,3 +12,4 @@
 <link rel="stylehseet" href="https://cdn.oesmith.co.uk/morris-0.5.1.css">
 <link rel="stylesheet" href="<?= base_url() ?>/assets/plugins/morris/morris.css">
 <link rel="stylesheet" href="<?= base_url() ?>/assets/css/style.css">
+<link rel="stylesheet" href="<?= base_url() ?>/assets/plugins/fullcalendar/fullcalendar.min.css">

@@ -20,6 +20,9 @@
 
 <script src="<?= base_url() ?>/assets/js/bootstrap-datetimepicker.min.js"></script>
 
+<script src="<?= base_url() ?>/assets/js/jquery-ui.min.js"></script>
+<script src="<?= base_url() ?>/assets/plugins/fullcalendar/fullcalendar.min.js"></script>
+<script src="<?= base_url() ?>/assets/plugins/fullcalendar/jquery.fullcalendar.js"></script>
 <script src="<?= base_url() ?>/assets/js/chart.morris.js"></script>
 
 <script src="<?= base_url() ?>/assets/js/script.js"></script>ß
