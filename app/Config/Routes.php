@@ -70,7 +70,7 @@ $routes->group('calender', static function ($routes) {
 });
 
 $routes->group('customers', static function ($routes) {
-    $routes->get('all', 'Customers::all');
+    $routes->get('all', 'Customers::index');
     $routes->get('add', 'Customers::add');
     $routes->get('edit', 'Customers::edit');
 });
@@ -118,6 +118,14 @@ $routes->group('rooms', static function ($routes) {
     $routes->get('all', 'Rooms::index');
     $routes->get('add', 'Rooms::add');
     $routes->get('edit', 'Rooms::edit');
+});
+
+$routes->group('blogs', static function ($routes) {
+    $routes->get('all', 'Blogs::index');
+    $routes->get('add', 'Blogs::add');
+    $routes->get('edit', 'Blogs::edit');
+    $routes->get('blog', 'Blogs::blog');
+    $routes->get('delete', 'Blogs::delete');
 });
 
 $routes->group('staffs', static function ($routes) {

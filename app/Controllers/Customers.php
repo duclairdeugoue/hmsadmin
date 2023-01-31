@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 
 class Customers extends BaseController
 {
-    public function all()
+    public function index()
     {
         echo view('customers/all');
     }

@@ -33,6 +33,14 @@
   <?= $this->include('layouts/_footer_assets') ?>
 
   <!-- Scripts -->
+  <script>
+    $(function() {
+
+      $('#datetimepicker3').datetimepicker({
+        format: 'LT'
+      });
+    });
+  </script>
   <?= $this->renderSection('scripts') ?>
 </body>
 

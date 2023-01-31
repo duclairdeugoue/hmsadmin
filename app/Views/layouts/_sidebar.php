@@ -78,10 +78,8 @@
         <li class="<?php if (url_is('/calender/calender')) : ?>active<?php endif ?>"> <a href="<?= base_url() ?>/calender/calender"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a> </li>
         <li class="submenu"> <a href="<?= base_url() ?>/blog"><i class="fe fe-table"></i> <span> Blog </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
-            <li><a class="<?php if (url_is('/blog/blog')) : ?>active<?php endif ?>" href="<?= base_url() ?>/blog/blog">Blog </a></li>
-            <li><a class="<?php if (url_is('/blog/details')) : ?>active<?php endif ?>" href="<?= base_url() ?>/blog/details">Blog Veiw </a></li>
-            <li><a class="<?php if (url_is('/blog/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/blog/add">Add Blog </a></li>
-            <li><a class="<?php if (url_is('/blog/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/blog/edit">Edit Blog </a></li>
+            <li><a class="<?php if (url_is('/blogs/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/blogs/all">All Blogs </a></li>
+            <li><a class="<?php if (url_is('/blogs/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/blogs/add">Add Blog </a></li>
           </ul>
         </li>
         <!-- <li> <a  href="<?= base_url() ?>assets"><i class="fas fa-cube"></i> <span>Assests</span></a> </li> -->
