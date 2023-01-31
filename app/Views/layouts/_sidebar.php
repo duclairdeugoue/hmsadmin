@@ -21,7 +21,9 @@
         <li class="submenu"> <a href="<?= base_url() ?>/rooms"><i class="fas fa-key"></i> <span> Rooms </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a class="<?php if (url_is('/rooms/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/rooms/all">All Rooms </a></li>
-            <!-- <li><a class="<?php //if (url_is('/rooms/edit')) : ?>active<?php //endif ?>" href="<?= base_url() ?>/rooms/edit"> Edit Rooms </a></li> -->
+            <!-- <li><a class="<?php //if (url_is('/rooms/edit')) : 
+                                ?>active<?php //endif 
+                                                                            ?>" href="<?= base_url() ?>/rooms/edit"> Edit Rooms </a></li> -->
             <li><a class="<?php if (url_is('/rooms/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/rooms/add"> Add Rooms </a></li>
           </ul>
         </li>
@@ -62,11 +64,11 @@
         </li>
         <li class="submenu"> <a href="<?= base_url() ?>/accounts"><i class="far fa-money-bill-alt"></i> <span> Accounts </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
-            <li><a class="<?php if (url_is('/accounts/invoices')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/invoices">Invoices </a></li>
-            <li><a class="<?php if (url_is('/accounts/payments')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/payments">Payments </a></li>
-            <li><a class="<?php if (url_is('/accounts/expenses')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/expenses">Expenses </a></li>
-            <li><a class="<?php if (url_is('/accounts/taxes')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/taxes">Taxes </a></li>
-            <li><a class="<?php if (url_is('/accounts/provident_funds')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/provident_funds">Provident Fund </a></li>
+            <li><a class="<?php if (url_is('/accounts/invoices/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/invoices/all">Invoices </a></li>
+            <li><a class="<?php if (url_is('/accounts/payments/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/payments/all">Payments </a></li>
+            <li><a class="<?php if (url_is('/accounts/expenses/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/expenses/all">Expenses </a></li>
+            <li><a class="<?php if (url_is('/accounts/taxes/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/taxes/all">Taxes </a></li>
+            <li><a class="<?php if (url_is('/accounts/provident_funds/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/provident_funds/all">Provident Fund </a></li>
           </ul>
         </li>
         <li class="submenu"> <a href="<?= base_url() ?>/payroll"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
@@ -82,7 +84,6 @@
             <li><a class="<?php if (url_is('/blogs/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/blogs/add">Add Blog </a></li>
           </ul>
         </li>
-        <!-- <li> <a  href="<?= base_url() ?>assets"><i class="fas fa-cube"></i> <span>Assests</span></a> </li> -->
         <li class="<?php if (url_is('/activities/activities')) : ?>active<?php endif ?>"> <a href="<?= base_url() ?>/activities/activities"><i class="far fa-bell"></i> <span>Activities</span></a> </li>
         <li class="submenu"> <a href="<?= base_url() ?>/reports"><i class="fe fe-table"></i> <span> Reports </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">

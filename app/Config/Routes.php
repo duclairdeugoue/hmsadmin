@@ -44,30 +44,61 @@ $routes->group('auth', static function ($routes) {
     $routes->get('forget_password', 'Auth::forgetPassword');
 });
 
+
 $routes->group('dashboard', static function ($routes) {
     $routes->get('dashboard', 'Dashboard::index');
 });
 
+
 $routes->group('accounts', static function ($routes) {
-    $routes->get('expenses', 'Accounts::expenses');
-    $routes->get('invoices', 'Accounts::invoices');
-    $routes->get('payments', 'Accounts::payments');
-    $routes->get('taxes', 'Accounts::taxes');
+    $routes->group('expenses', static function ($routes) {
+        $routes->get('all', 'AccountsExpenses::index');
+        $routes->get('add', 'AccountsExpenses::add');
+        $routes->get('edit', 'AccountsExpenses::edit');
+    });
+
+    $routes->group('invoices', static function ($routes) {
+        $routes->get('all', 'AccountsInvoices::index');
+        $routes->get('add', 'AccountsInvoices::add');
+        $routes->get('edit', 'AccountsInvoices::edit');
+    });
+
+    $routes->group('payments', static function ($routes) {
+        $routes->get('all', 'AccountsPayments::index');
+        $routes->get('add', 'AccountsPayments::add');
+        $routes->get('edit', 'AccountsPayments::edit');
+    });
+
+    $routes->group('taxes', static function ($routes) {
+        $routes->get('all', 'AccountsTaxes::index');
+        $routes->get('add', 'AccountsTaxes::add');
+        $routes->get('edit', 'AccountsTaxes::edit');
+    });
+
+    $routes->group('provident_funds', static function ($routes) {
+        $routes->get('all', 'AccountsProvidentfunds::index');
+        $routes->get('add', 'AccountsProvidentfunds::add');
+        $routes->get('edit', 'AccountsProvidentfunds::edit');
+    });
 });
+
 
 $routes->group('activities', static function ($routes) {
     $routes->get('activities', 'Activities::index');
 });
 
+
 $routes->group('bookings', static function ($routes) {
-    $routes->get('all', 'bookings::all');
-    $routes->get('add', 'bookings::add');
-    $routes->get('edit', 'bookings::edit');
+    $routes->get('all', 'Bookings::all');
+    $routes->get('add', 'Bookings::add');
+    $routes->get('edit', 'Bookings::edit');
 });
+
 
 $routes->group('calender', static function ($routes) {
     $routes->get('calender', 'Calender::index');
 });
+
 
 $routes->group('customers', static function ($routes) {
     $routes->get('all', 'Customers::index');
@@ -75,11 +106,12 @@ $routes->group('customers', static function ($routes) {
     $routes->get('edit', 'Customers::edit');
 });
 
+
 $routes->group('employees', static function ($routes) {
     $routes->get('all', 'Employees::index');
     $routes->get('add', 'Employees::add');
     $routes->get('edit', 'Employees::edit');
-    
+
     $routes->group('attendance', static function ($routes) {
         $routes->get('all', 'EmployeesAttendance::index');
         $routes->get('add', 'EmployeesAttendance::add');
@@ -91,13 +123,14 @@ $routes->group('employees', static function ($routes) {
         $routes->get('add', 'EmployeesHolidays::add');
         $routes->get('edit', 'EmployeesHolidays::edit');
     });
-    
+
     $routes->group('leaves', static function ($routes) {
         $routes->get('all', 'EmployeesLeaves::index');
         $routes->get('add', 'EmployeesLeaves::add');
         $routes->get('edit', 'EmployeesLeaves::edit');
     });
 });
+
 
 $routes->group('pricings', static function ($routes) {
     $routes->get('all', 'Pricings::index');
@@ -120,6 +153,7 @@ $routes->group('rooms', static function ($routes) {
     $routes->get('edit', 'Rooms::edit');
 });
 
+
 $routes->group('blogs', static function ($routes) {
     $routes->get('all', 'Blogs::index');
     $routes->get('add', 'Blogs::add');
@@ -128,11 +162,13 @@ $routes->group('blogs', static function ($routes) {
     $routes->get('delete', 'Blogs::delete');
 });
 
+
 $routes->group('staffs', static function ($routes) {
     $routes->get('all', 'Staffs::index');
     $routes->get('add', 'Staffs::add');
     $routes->get('edit', 'Staffs::edit');
 });
+
 
 $routes->group('settings', static function ($routes) {
     $routes->get('setting', 'Settings::index');

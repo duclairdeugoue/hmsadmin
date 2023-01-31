@@ -2,7 +2,7 @@
 
 <?= $this->section('styles') ?>
 <style>
-  
+
 </style>
 <?= $this->endSection()  ?>
 
@@ -14,7 +14,7 @@
       <div class="col">
         <div class="mt-5">
           <h4 class="card-title float-left mt-2">Invoices</h4>
-          <a href="create-invoice.html" class="btn btn-primary float-right veiwbutton">Create New Invoice</a>
+          <a href="<?= base_url() ?>/accounts/invoices/add" class="btn btn-primary float-right veiwbutton">Create New Invoice</a>
         </div>
       </div>
     </div>
@@ -101,7 +101,7 @@
                     <div class="dropdown dropdown-action">
                       <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
                       <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="edit-invoice.html"><i class="fas fa-pencil-alt m-r-5"></i>
+                        <a class="dropdown-item" href="<?= base_url() ?>/accounts/invoices/edit"><i class="fas fa-pencil-alt m-r-5"></i>
                           Edit</a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i>
                           Delete</a>
@@ -128,7 +128,7 @@
                     <div class="dropdown dropdown-action">
                       <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
                       <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="edit-invoice.html"><i class="fas fa-pencil-alt m-r-5"></i>
+                        <a class="dropdown-item" href="<?= base_url() ?>/accounts/invoices/edit"><i class="fas fa-pencil-alt m-r-5"></i>
                           Edit</a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i>
                           Delete</a>
@@ -155,7 +155,7 @@
                     <div class="dropdown dropdown-action">
                       <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
                       <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="edit-invoice.html"><i class="fas fa-pencil-alt m-r-5"></i>
+                        <a class="dropdown-item" href="<?= base_url() ?>/accounts/invoices/edit"><i class="fas fa-pencil-alt m-r-5"></i>
                           Edit</a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i>
                           Delete</a>
@@ -182,7 +182,7 @@
                     <div class="dropdown dropdown-action">
                       <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
                       <div class="dropdown-menu dropdown-menu-right">
-                        <a class="dropdown-item" href="edit-invoice.html"><i class="fas fa-pencil-alt m-r-5"></i>
+                        <a class="dropdown-item" href="<?= base_url() ?>/accounts/invoices/edit"><i class="fas fa-pencil-alt m-r-5"></i>
                           Edit</a>
                         <a class="dropdown-item" href="#" data-toggle="modal" data-target="#delete_asset"><i class="fas fa-trash-alt m-r-5"></i>
                           Delete</a>
