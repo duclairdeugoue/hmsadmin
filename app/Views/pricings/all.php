@@ -51,7 +51,7 @@
                       <span class="fa-li"><i class="fas fa-check"></i></span>Parking
                     </li>
                   </ul>
-                  <a href="edit-pricing.html" class="btn btn-block btn-primary text-uppercase">Edit</a>
+                  <a href="<?= base_url()?>/pricings/edit" class="btn btn-block btn-primary text-uppercase">Edit</a>
                 </div>
               </div>
             </div>
@@ -83,7 +83,7 @@
                       <span class="fa-li"><i class="fas fa-check"></i></span>Parking
                     </li>
                   </ul>
-                  <a href="edit-pricing.html" class="btn btn-block btn-primary text-uppercase">Edit</a>
+                  <a href="<?= base_url()?>/pricings/edit" class="btn btn-block btn-primary text-uppercase">Edit</a>
                 </div>
               </div>
             </div>
@@ -115,7 +115,7 @@
                       <span class="fa-li"><i class="fas fa-check"></i></span>Parking
                     </li>
                   </ul>
-                  <a href="edit-pricing.html" class="btn btn-block btn-primary text-uppercase">Edit</a>
+                  <a href="<?= base_url()?>/pricings/edit" class="btn btn-block btn-primary text-uppercase">Edit</a>
                 </div>
               </div>
             </div>
@@ -146,7 +146,7 @@
                       <span class="fa-li"><i class="fas fa-check"></i></span>Parking
                     </li>
                   </ul>
-                  <a href="edit-pricing.html" class="btn btn-block btn-primary text-uppercase">Edit</a>
+                  <a href="<?= base_url()?>/pricings/edit" class="btn btn-block btn-primary text-uppercase">Edit</a>
                 </div>
               </div>
             </div>
