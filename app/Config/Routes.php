@@ -76,16 +76,28 @@ $routes->group('customers', static function ($routes) {
 });
 
 $routes->group('employees', static function ($routes) {
-    $routes->get('list', 'Employees::list');
-    $routes->get('attendance', 'Employees::attedance');
-    $routes->get('holidays', 'Employees::holidays');
-    $routes->get('leaves', 'Employees::leaves');
-});
+    $routes->get('all', 'Employees::index');
+    $routes->get('add', 'Employees::add');
+    $routes->get('edit', 'Employees::edit');
+    
+    $routes->group('attendance', static function ($routes) {
+        $routes->get('all', 'EmployeesAttendance::index');
+        $routes->get('add', 'EmployeesAttendance::add');
+        $routes->get('edit', 'EmployeesAttendance::edit');
+    });
 
-// $routes->group('error-page', static function ($routes) {
-//     $routes->get('error-404', 'Errorpage::notFoundPage');
-//     $routes->get('error-505', 'Errorpage::serverError');
-// });
+    $routes->group('holidays', static function ($routes) {
+        $routes->get('all', 'EmployeesHolidays::index');
+        $routes->get('add', 'EmployeesHolidays::add');
+        $routes->get('edit', 'EmployeesHolidays::edit');
+    });
+    
+    $routes->group('leaves', static function ($routes) {
+        $routes->get('all', 'EmployeesLeaves::index');
+        $routes->get('add', 'EmployeesLeaves::add');
+        $routes->get('edit', 'EmployeesLeaves::edit');
+    });
+});
 
 $routes->group('pricings', static function ($routes) {
     $routes->get('all', 'Pricings::index');

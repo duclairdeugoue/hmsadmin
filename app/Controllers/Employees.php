@@ -6,23 +6,23 @@ use App\Controllers\BaseController;
 
 class Employees extends BaseController
 {
-    public function list()
+    public function index()
     {
-        echo view('employees/list');
+        echo view('employees/all');
+    }
+    
+    public function edit()
+    {
+        echo view('employees/edit');
     }
 
-    public function attendance()
+    public function add()
     {
-        echo view('employees/attendance');
+        echo view('employees/add');
     }
 
-    public function holidays()
+    public function delete()
     {
-        echo view('employees/holidays');
-    }
-
-    public function leaves()
-    {
-        echo view('employees/leaves');
+        echo view('employees/delete');
     }
 }
