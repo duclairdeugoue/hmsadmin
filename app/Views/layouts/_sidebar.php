@@ -21,9 +21,7 @@
         <li class="submenu"> <a href="<?= base_url() ?>/rooms"><i class="fas fa-key"></i> <span> Rooms </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a class="<?php if (url_is('/rooms/all')) : ?>active<?php endif ?>" href="<?= base_url() ?>/rooms/all">All Rooms </a></li>
-            <!-- <li><a class="<?php //if (url_is('/rooms/edit')) : 
-                                ?>active<?php //endif 
-                                                                            ?>" href="<?= base_url() ?>/rooms/edit"> Edit Rooms </a></li> -->
+
             <li><a class="<?php if (url_is('/rooms/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/rooms/add"> Add Rooms </a></li>
           </ul>
         </li>
@@ -35,25 +33,6 @@
           </ul>
         </li>
         <li class="<?php if (url_is('/pricings/*')) : ?>active<?php endif ?>"> <a href="<?= base_url() ?>/pricings/all"><i class="far fa-money-bill-alt"></i> <span>Pricing</span></a> </li>
-        <li class="submenu"> <a href="<?= base_url() ?>/sharings"><i class="fas fa-share-alt"></i> <span> Apps </span> <span class="menu-arrow"></span></a>
-          <ul class="submenu_class" style="display: none;">
-            <li><a href="<?= base_url() ?>chat"><i class="fas fa-comments"></i><span> Chat </span></a></li>
-            <li class="submenu"> <a href="<?= base_url() ?>#"><i class="fas fa-video camera"></i> <span> Calls </span> <span class="menu-arrow"></span></a>
-              <ul class="submenu_class" style="display: none;">
-                <li><a class="<?php if (url_is('/accounts/invoices')) : ?>active<?php endif ?>" href="<?= base_url() ?>voice-call"> Voice Call </a></li>
-                <li><a class="<?php if (url_is('/accounts/invoices')) : ?>active<?php endif ?>" href="<?= base_url() ?>video-call"> Video Call </a></li>
-                <li><a class="<?php if (url_is('/accounts/invoices')) : ?>active<?php endif ?>" href="<?= base_url() ?>incoming-call"> Incoming Call </a></li>
-              </ul>
-            </li>
-            <li class="submenu"> <a href="<?= base_url() ?>#"><i class="fas fa-envelope"></i> <span> Email </span> <span class="menu-arrow"></span></a>
-              <ul class="submenu_class" style="display: none;">
-                <li><a class="<?php if (url_is('/accounts/invoices')) : ?>active<?php endif ?>" href="<?= base_url() ?>compose">Compose Mail </a></li>
-                <li><a class="<?php if (url_is('/accounts/invoices')) : ?>active<?php endif ?>" href="<?= base_url() ?>inbox"> Inbox </a></li>
-                <li><a class="<?php if (url_is('/accounts/invoices')) : ?>active<?php endif ?>" href="<?= base_url() ?>mail-veiw"> Mail Veiw </a></li>
-              </ul>
-            </li>
-          </ul>
-        </li>
         <li class="submenu"> <a href="<?= base_url() ?>/employees"><i class="fas fa-user"></i> <span> Employees </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a class="<?php if (url_is('/employees/all') || url_is('/employees/add') || url_is('/employees/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/employees/all">Employees List </a></li>
@@ -71,12 +50,7 @@
             <li><a class="<?php if (url_is('/accounts/provident_funds/*')) : ?>active<?php endif ?>" href="<?= base_url() ?>/accounts/provident_funds/all">Provident Fund </a></li>
           </ul>
         </li>
-        <li class="submenu"> <a href="<?= base_url() ?>/payroll"><i class="fas fa-book"></i> <span> Payroll </span> <span class="menu-arrow"></span></a>
-          <ul class="submenu_class" style="display: none;">
-            <li><a class="<?php if (url_is('/salary')) : ?>active<?php endif ?>" href="<?= base_url() ?>salary">Employee Salary </a></li>
-            <li><a class="<?php if (url_is('/salary')) : ?>active<?php endif ?>" href="<?= base_url() ?>salary-veiw">Payslip </a></li>
-          </ul>
-        </li>
+
         <li class="<?php if (url_is('/calender/calender')) : ?>active<?php endif ?>"> <a href="<?= base_url() ?>/calender/calender"><i class="fas fa-calendar-alt"></i> <span>Calendar</span></a> </li>
         <li class="submenu"> <a href="<?= base_url() ?>/blog"><i class="fe fe-table"></i> <span> Blog </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
