@@ -10,4 +10,9 @@ class Profile extends BaseController
     {
         echo view('profile/profile');
     }
+
+    public function edit()
+    {
+        echo view('profile/edit');
+    }
 }
