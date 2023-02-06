@@ -34,6 +34,6 @@
 
 <?= $this->section('scripts') ?>
 <script>
-  console.log("testing");
+  
 </script>
 <?= $this->endSection()  ?>
