@@ -38,11 +38,11 @@
               <?php endif ?>
 
               <?php if (url_is('/auth/forget_password')) : ?>
-                <div class="text-center dont-have">Remember your password? <a href="<?= base_url() ?>/">Login</a></div>
+                <div class="text-center dont-have">Remember your password? <a href="<?= base_url() ?>/auth">Login</a></div>
               <?php endif ?>
 
               <?php if (url_is('/auth/register')) : ?>
-                <div class="text-center dont-have">Already have an account? <a href="<?= base_url() ?>/">Login</a> </div>
+                <div class="text-center dont-have">Already have an account? <a href="<?= base_url() ?>/auth">Login</a> </div>
               <?php endif ?>
 
               <?php if (url_is('/')) : ?>
