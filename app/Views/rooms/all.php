@@ -13,7 +13,7 @@
     <div class="row align-items-center">
       <div class="col">
         <div class="mt-5">
-          <h4 class="card-title float-left mt-2">All Rooms</h4> <a href="add-room.html" class="btn btn-primary float-right veiwbutton">Add Room</a>
+          <h4 class="card-title float-left mt-2">All Rooms</h4> <a href="<?= base_url()?>/rooms/add" class="btn btn-primary float-right veiwbutton">Add Room</a>
         </div>
       </div>
     </div>
