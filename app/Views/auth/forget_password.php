@@ -18,7 +18,7 @@
     <button class="btn btn-primary btn-block" type="submit">Reset Password</button>
   </div>
 </form>
-<div class="text-center dont-have">Remember your password? <a href="<?= base_url() ?>/auth/login">Login</a></div>
+<!-- <div class="text-center dont-have">Remember your password? <a href="<?= base_url() ?>/auth/login">Login</a></div> -->
 <?= $this->endSection() ?>
 
 

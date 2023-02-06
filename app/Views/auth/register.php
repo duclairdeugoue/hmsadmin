@@ -26,9 +26,9 @@
     <button class="btn btn-primary btn-block" type="submit">Register</button>
   </div>
 </form>
-<div class="login-or"> <span class="or-line"></span> <span class="span-or">or</span> </div>
+<!-- <div class="login-or"> <span class="or-line"></span> <span class="span-or">or</span> </div>
 <div class="social-login"> <span>Register with</span> <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a><a href="#" class="google"><i class="fab fa-google"></i></a> </div>
-<div class="text-center dont-have">Already have an account? <a href="<?= base_url() ?>/auth/login">Login</a> </div>
+<div class="text-center dont-have">Already have an account? <a href="<?= base_url() ?>/auth/login">Login</a> </div> -->
 <?= $this->endSection() ?>
 
 

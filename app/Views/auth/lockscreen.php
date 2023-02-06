@@ -25,7 +25,7 @@
 </form>
 
 <div class="text-center dont-have">
-  Sign in as a different user? <a href="login.html">Login</a>
+  Sign in as a different user? <a href="<?= base_url() ?>/">Login</a>
 </div>
 <?= $this->endSection() ?>
 
