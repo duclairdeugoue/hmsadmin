@@ -13,7 +13,7 @@
   <h4>John Doe</h4>
 </div>
 
-<form action="<?= base_url() ?>/dashboard/dashboard">
+<form action="<?= base_url() ?>/dashboard">
   <div class="form-group">
     <input class="form-control" type="text" placeholder="Password" />
   </div>

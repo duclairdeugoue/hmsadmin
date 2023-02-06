@@ -9,7 +9,7 @@
 
 <?= $this->section('content') ?>
 <h1 class="mb-3">Register</h1>
-<form action="<?= base_url() ?>/auth/login">
+<form action="<?= base_url() ?>/auth">
   <div class="form-group">
     <input class="form-control" type="text" placeholder="Name">
   </div>

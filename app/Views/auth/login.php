@@ -10,7 +10,7 @@
 <?= $this->section('content') ?>
 <h1>Login</h1>
 <p class="account-subtitle">Access to our dashboard</p>
-<form action="<?= base_url() ?>/dashboard/dashboard">
+<form action="<?= base_url() ?>/dashboard">
   <div class="form-group">
     <input class="form-control" type="email" placeholder="Email">
   </div>
