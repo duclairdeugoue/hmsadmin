@@ -6,7 +6,7 @@ use App\Controllers\BaseController;
 
 class Auth extends BaseController
 {
-    public function login()
+    public function index()
     {
         echo view('auth/login');
     }
