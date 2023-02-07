@@ -37,6 +37,8 @@ $routes->set404Override(static function () {
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
+
+
 $routes->group('auth', static function ($routes) {
     $routes->get('/', 'AuthController::index');
     $routes->get('register', 'AuthController::register');
@@ -44,11 +46,9 @@ $routes->group('auth', static function ($routes) {
     $routes->get('forget_password', 'AuthController::forgetPassword');
 });
 
-
 $routes->group('dashboard', static function ($routes) {
     $routes->get('/', 'DashboardController::index');
 });
-
 
 $routes->group('accounts', static function ($routes) {
     $routes->group('expenses', static function ($routes) {
@@ -82,75 +82,62 @@ $routes->group('accounts', static function ($routes) {
     });
 });
 
-
 $routes->group('activities', static function ($routes) {
     $routes->get('/', 'ActivitiesController::index');
-    // $routes->get('activities', 'Activities::index');
 });
 
 
 $routes->group('bookings', static function ($routes) {
-    $routes->get('/', 'BookingsController::all');
-    // $routes->get('all', 'Bookings::all');
+    $routes->get('/', 'BookingsController::index');
     $routes->get('add', 'BookingsController::add');
     $routes->get('edit', 'BookingsController::edit');
 });
 
-
 $routes->group('calender', static function ($routes) {
     $routes->get('/', 'CalenderController::index');
-    // $routes->get('calender', 'Calender::index');
 });
-
 
 $routes->group('customers', static function ($routes) {
     $routes->get('/', 'CustomersController::index');
-    // $routes->get('all', 'Customers::index');
-    $routes->get('add', 'CustomersController::add');
-    $routes->get('edit', 'CustomersController::edit');
+    $routes->get('add', 'CustomersController::addCustomer');
+    $routes->get('edit', 'CustomersController::editCustomer');
 });
 
 
 $routes->group('employees', static function ($routes) {
     $routes->get('/', 'EmployeesController::index');
-    // $routes->get('all', 'Employees::index');
-    $routes->get('add', 'EmployeesController::add');
-    $routes->get('edit', 'EmployeesController::edit');
+    $routes->get('add', 'EmployeesController::addEmployee');
+    $routes->get('edit', 'EmployeesController::editEmployee');
 
     $routes->group('attendance', static function ($routes) {
-        $routes->get('/', 'EmployeesAttendanceController::index');
-        // $routes->get('all', 'EmployeesAttendance::index');
-        $routes->get('add', 'EmployeesAttendanceController::add');
-        $routes->get('edit', 'EmployeesAttendanceController::edit');
+        $routes->get('/', 'EmployeesController::viewAttendances');
+        $routes->get('add', 'EmployeesController::addAttendance');
+        $routes->get('edit', 'EmployeesController::editAttendance');
     });
 
     $routes->group('holidays', static function ($routes) {
-        $routes->get('/', 'EmployeesHolidaysController::index');
-        // $routes->get('all', 'EmployeesHolidays::index');
-        $routes->get('add', 'EmployeesHolidaysController::add');
-        $routes->get('edit', 'EmployeesHolidaysController::edit');
+        $routes->get('/', 'EmployeesController::viewHolidays');
+        $routes->get('add', 'EmployeesController::addHodidays');
+        $routes->get('edit', 'EmployeesController::editHolidays');
     });
 
     $routes->group('leaves', static function ($routes) {
-        $routes->get('/', 'EmployeesLeavesController::index');
-        // $routes->get('all', 'EmployeesLeaves::index');
-        $routes->get('add', 'EmployeesLeavesController::add');
-        $routes->get('edit', 'EmployeesLeavesController::edit');
+        $routes->get('/', 'EmployeesController::viewLeaves');
+        $routes->get('add', 'EmployeesController::addLeaves');
+        $routes->get('edit', 'EmployeesController::editLeaves');
     });
 });
 
 
 $routes->group('pricings', static function ($routes) {
     $routes->get('/', 'PricingsController::index');
-    // $routes->get('all', 'Pricings::index');
-    $routes->get('add', 'PricingsController::add');
-    $routes->get('edit', 'PricingsController::edit');
+    $routes->get('add', 'PricingsController::addPricing');
+    $routes->get('edit', 'PricingsController::editPricing');
 });
 
-$routes->group('profile', static function ($routes) {
-    $routes->get('/', 'ProfileController::index');
-    // $routes->get('profile', 'Profile::index');
-    $routes->get('edit', 'ProfileController::edit');
+$routes->group('users', static function ($routes) {
+    $routes->get('/', 'UsersController::index');
+    $routes->group('profile', 'UserController::editProfile');
 });
 
 $routes->group('reports', static function ($routes) {
@@ -161,33 +148,29 @@ $routes->group('reports', static function ($routes) {
 
 $routes->group('rooms', static function ($routes) {
     $routes->get('/', 'RoomsController::index');
-    // $routes->get('all', 'Rooms::index');
-    $routes->get('add', 'RoomsController::add');
-    $routes->get('edit', 'RoomsController::edit');
+    $routes->get('add', 'RoomsController::addRooms');
+    $routes->get('edit', 'RoomsController::editRooms');
 });
 
 
 $routes->group('blogs', static function ($routes) {
     $routes->get('/', 'BlogsController::index');
-    // $routes->get('all', 'Blogs::index');
-    $routes->get('add', 'BlogsController::add');
-    $routes->get('edit', 'BlogsController::edit');
-    $routes->get('blog', 'BlogsController::blog');
-    $routes->get('delete', 'BlogsController::delete');
+    $routes->get('add', 'BlogsController::addBlog');
+    $routes->get('edit', 'BlogsController::editBlog');
+    $routes->get('blog', 'BlogsController::showBlog');
+    $routes->get('delete', 'BlogsController::deleteBlog');
 });
 
 
 $routes->group('staffs', static function ($routes) {
     $routes->get('/', 'Staffs::index');
-    // $routes->get('all', 'Staffs::index');
-    $routes->get('add', 'StaffsController::add');
-    $routes->get('edit', 'StaffsController::edit');
+    $routes->get('add', 'StaffsController::addStaff');
+    $routes->get('edit', 'StaffsController::editStaff');
 });
 
 
 $routes->group('settings', static function ($routes) {
     $routes->get('/', 'SettingsController::index');
-    // $routes->get('setting', 'Settings::index');
     $routes->get('change-password', 'SettingsController::changePassword');
     $routes->get('email', 'SettingsController::email');
     $routes->get('invoice', 'SettingsController::invoice');
