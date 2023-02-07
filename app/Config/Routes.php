@@ -47,44 +47,38 @@ $routes->group('auth', static function ($routes) {
 
 $routes->group('dashboard', static function ($routes) {
     $routes->get('/', 'DashboardController::index');
-    // $routes->get('dashboard', 'Dashboard::index');
 });
 
 
 $routes->group('accounts', static function ($routes) {
     $routes->group('expenses', static function ($routes) {
-        $routes->get('/', 'AccountsExpensesController::index');
-        // $routes->get('all', 'AccountsExpenses::index');
-        $routes->get('add', 'AccountsExpensesController::add');
-        $routes->get('edit', 'AccountsExpensesController::edit');
+        $routes->get('/', 'AccountsController::viewExpense');
+        $routes->get('add', 'AccountsController::addExpense');
+        $routes->get('edit', 'AccountsController::editExpense');
     });
 
     $routes->group('invoices', static function ($routes) {
-        $routes->get('/', 'AccountsInvoicesController::index');
-        // $routes->get('all', 'AccountsInvoices::index');
-        $routes->get('add', 'AccountsInvoicesController::add');
-        $routes->get('edit', 'AccountsInvoicesController::edit');
+        $routes->get('/', 'AccountsController::viewInvoices');
+        $routes->get('add', 'AccountsController::addInvoice');
+        $routes->get('edit', 'AccountsController::editInvoice');
     });
 
     $routes->group('payments', static function ($routes) {
-        $routes->get('/', 'AccountsPaymentsController::index');
-        // $routes->get('all', 'AccountsPayments::index');
-        $routes->get('add', 'AccountsPaymentsController::add');
-        $routes->get('edit', 'AccountsPaymentsController::edit');
+        $routes->get('/', 'AccountsController::viewPayments');
+        $routes->get('add', 'AccountsController::addPayment');
+        $routes->get('edit', 'AccountsController::editPayment');
     });
 
     $routes->group('taxes', static function ($routes) {
-        $routes->get('/', 'AccountsTaxesController::index');
-        // $routes->get('all', 'AccountsTaxes::index');
-        $routes->get('add', 'AccountsTaxesController::add');
-        $routes->get('edit', 'AccountsTaxesController::edit');
+        $routes->get('/', 'AccountsController::viewTaxes');
+        $routes->get('add', 'AccountsController::addTax');
+        $routes->get('edit', 'AccountsController::editTax');
     });
 
     $routes->group('provident_funds', static function ($routes) {
-        $routes->get('/', 'AccountsProvidentfundsController::index');
-        // $routes->get('all', 'AccountsProvidentfunds::index');
-        $routes->get('add', 'AccountsProvidentfundsController::add');
-        $routes->get('edit', 'AccountsProvidentfundsController::edit');
+        $routes->get('/', 'AccountsController::viewProvidentfunds');
+        $routes->get('add', 'AccountsController::addProvidentfund');
+        $routes->get('edit', 'AccountsController::editProvidentfund');
     });
 });
 
