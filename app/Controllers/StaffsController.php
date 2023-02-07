@@ -11,11 +11,11 @@ class StaffsController extends BaseController
         echo view('staffs/all');
     }
 
-    public function add()
+    public function addStaff()
     {
         echo view('staffs/add');
     }
-    public function edit()
+    public function editStaff()
     {
         echo view('staffs/edit');
     }

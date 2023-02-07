@@ -11,17 +11,17 @@ class BlogsController extends BaseController
         echo view('blogs/all');
     }
 
-    public function add()
+    public function addBlog()
     {
         echo view('blogs/add');
     }
 
-    public function edit()
+    public function editBlog()
     {
         echo view('blogs/edit');
     }
 
-    public function blog()
+    public function showBlog()
     {
         echo view('blogs/blog');
     }

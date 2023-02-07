@@ -11,12 +11,12 @@ class RoomsController extends BaseController
         echo view('rooms/all');
     }
 
-    public function add()
+    public function addRoom()
     {
         echo view('rooms/add');
     }
 
-    public function edit()
+    public function editRoom()
     {
         echo view('rooms/edit');
     }

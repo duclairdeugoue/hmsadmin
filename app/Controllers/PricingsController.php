@@ -11,12 +11,12 @@ class PricingsController extends BaseController
         echo view('pricings/all');
     }
 
-    public function add()
+    public function addPricing()
     {
         echo view('pricings/add');
     }
 
-    public function edit()
+    public function editPricing()
     {
         echo view('pricings/edit');
     }

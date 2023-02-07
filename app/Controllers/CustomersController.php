@@ -11,12 +11,12 @@ class CustomersController extends BaseController
         echo view('customers/all');
     }
 
-    public function add()
+    public function addCustomer()
     {
         echo view('customers/add');
     }
 
-    public function edit()
+    public function editCustomer()
     {
         echo view('customers/edit');
     }

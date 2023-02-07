@@ -89,8 +89,8 @@ $routes->group('activities', static function ($routes) {
 
 $routes->group('bookings', static function ($routes) {
     $routes->get('/', 'BookingsController::index');
-    $routes->get('add', 'BookingsController::add');
-    $routes->get('edit', 'BookingsController::edit');
+    $routes->get('add', 'BookingsController::addBooking');
+    $routes->get('edit', 'BookingsController::editBooking');
 });
 
 $routes->group('calender', static function ($routes) {
@@ -108,6 +108,7 @@ $routes->group('employees', static function ($routes) {
     $routes->get('/', 'EmployeesController::index');
     $routes->get('add', 'EmployeesController::addEmployee');
     $routes->get('edit', 'EmployeesController::editEmployee');
+    $routes->get('delete', 'EmployeesController::deleteEmployee');
 
     $routes->group('attendance', static function ($routes) {
         $routes->get('/', 'EmployeesController::viewAttendances');
@@ -137,7 +138,7 @@ $routes->group('pricings', static function ($routes) {
 
 $routes->group('users', static function ($routes) {
     $routes->get('/', 'UsersController::index');
-    $routes->group('profile', 'UserController::editProfile');
+    $routes->get('profile', 'UserController::editProfile');
 });
 
 $routes->group('reports', static function ($routes) {
