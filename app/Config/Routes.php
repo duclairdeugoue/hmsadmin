@@ -38,170 +38,170 @@ $routes->set404Override(static function () {
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->group('auth', static function ($routes) {
-    $routes->get('/', 'Auth::index');
-    $routes->get('register', 'Auth::register');
-    $routes->get('logout', 'Auth::logout');
-    $routes->get('forget_password', 'Auth::forgetPassword');
+    $routes->get('/', 'AuthController::index');
+    $routes->get('register', 'AuthController::register');
+    $routes->get('logout', 'AuthController::logout');
+    $routes->get('forget_password', 'AuthController::forgetPassword');
 });
 
 
 $routes->group('dashboard', static function ($routes) {
-    $routes->get('/', 'Dashboard::index');
+    $routes->get('/', 'DashboardController::index');
     // $routes->get('dashboard', 'Dashboard::index');
 });
 
 
 $routes->group('accounts', static function ($routes) {
     $routes->group('expenses', static function ($routes) {
-        $routes->get('/', 'AccountsExpenses::index');
+        $routes->get('/', 'AccountsExpensesController::index');
         // $routes->get('all', 'AccountsExpenses::index');
-        $routes->get('add', 'AccountsExpenses::add');
-        $routes->get('edit', 'AccountsExpenses::edit');
+        $routes->get('add', 'AccountsExpensesController::add');
+        $routes->get('edit', 'AccountsExpensesController::edit');
     });
 
     $routes->group('invoices', static function ($routes) {
-        $routes->get('/', 'AccountsInvoices::index');
+        $routes->get('/', 'AccountsInvoicesController::index');
         // $routes->get('all', 'AccountsInvoices::index');
-        $routes->get('add', 'AccountsInvoices::add');
-        $routes->get('edit', 'AccountsInvoices::edit');
+        $routes->get('add', 'AccountsInvoicesController::add');
+        $routes->get('edit', 'AccountsInvoicesController::edit');
     });
 
     $routes->group('payments', static function ($routes) {
-        $routes->get('/', 'AccountsPayments::index');
+        $routes->get('/', 'AccountsPaymentsController::index');
         // $routes->get('all', 'AccountsPayments::index');
-        $routes->get('add', 'AccountsPayments::add');
-        $routes->get('edit', 'AccountsPayments::edit');
+        $routes->get('add', 'AccountsPaymentsController::add');
+        $routes->get('edit', 'AccountsPaymentsController::edit');
     });
 
     $routes->group('taxes', static function ($routes) {
-        $routes->get('/', 'AccountsTaxes::index');
+        $routes->get('/', 'AccountsTaxesController::index');
         // $routes->get('all', 'AccountsTaxes::index');
-        $routes->get('add', 'AccountsTaxes::add');
-        $routes->get('edit', 'AccountsTaxes::edit');
+        $routes->get('add', 'AccountsTaxesController::add');
+        $routes->get('edit', 'AccountsTaxesController::edit');
     });
 
     $routes->group('provident_funds', static function ($routes) {
-        $routes->get('/', 'AccountsProvidentfunds::index');
+        $routes->get('/', 'AccountsProvidentfundsController::index');
         // $routes->get('all', 'AccountsProvidentfunds::index');
-        $routes->get('add', 'AccountsProvidentfunds::add');
-        $routes->get('edit', 'AccountsProvidentfunds::edit');
+        $routes->get('add', 'AccountsProvidentfundsController::add');
+        $routes->get('edit', 'AccountsProvidentfundsController::edit');
     });
 });
 
 
 $routes->group('activities', static function ($routes) {
-    $routes->get('/', 'Activities::index');
+    $routes->get('/', 'ActivitiesController::index');
     // $routes->get('activities', 'Activities::index');
 });
 
 
 $routes->group('bookings', static function ($routes) {
-    $routes->get('/', 'Bookings::all');
+    $routes->get('/', 'BookingsController::all');
     // $routes->get('all', 'Bookings::all');
-    $routes->get('add', 'Bookings::add');
-    $routes->get('edit', 'Bookings::edit');
+    $routes->get('add', 'BookingsController::add');
+    $routes->get('edit', 'BookingsController::edit');
 });
 
 
 $routes->group('calender', static function ($routes) {
-    $routes->get('/', 'Calender::index');
+    $routes->get('/', 'CalenderController::index');
     // $routes->get('calender', 'Calender::index');
 });
 
 
 $routes->group('customers', static function ($routes) {
-    $routes->get('/', 'Customers::index');
+    $routes->get('/', 'CustomersController::index');
     // $routes->get('all', 'Customers::index');
-    $routes->get('add', 'Customers::add');
-    $routes->get('edit', 'Customers::edit');
+    $routes->get('add', 'CustomersController::add');
+    $routes->get('edit', 'CustomersController::edit');
 });
 
 
 $routes->group('employees', static function ($routes) {
-    $routes->get('/', 'Employees::index');
+    $routes->get('/', 'EmployeesController::index');
     // $routes->get('all', 'Employees::index');
-    $routes->get('add', 'Employees::add');
-    $routes->get('edit', 'Employees::edit');
+    $routes->get('add', 'EmployeesController::add');
+    $routes->get('edit', 'EmployeesController::edit');
 
     $routes->group('attendance', static function ($routes) {
-        $routes->get('/', 'EmployeesAttendance::index');
+        $routes->get('/', 'EmployeesAttendanceController::index');
         // $routes->get('all', 'EmployeesAttendance::index');
-        $routes->get('add', 'EmployeesAttendance::add');
-        $routes->get('edit', 'EmployeesAttendance::edit');
+        $routes->get('add', 'EmployeesAttendanceController::add');
+        $routes->get('edit', 'EmployeesAttendanceController::edit');
     });
 
     $routes->group('holidays', static function ($routes) {
-        $routes->get('/', 'EmployeesHolidays::index');
+        $routes->get('/', 'EmployeesHolidaysController::index');
         // $routes->get('all', 'EmployeesHolidays::index');
-        $routes->get('add', 'EmployeesHolidays::add');
-        $routes->get('edit', 'EmployeesHolidays::edit');
+        $routes->get('add', 'EmployeesHolidaysController::add');
+        $routes->get('edit', 'EmployeesHolidaysController::edit');
     });
 
     $routes->group('leaves', static function ($routes) {
-        $routes->get('/', 'EmployeesLeaves::index');
+        $routes->get('/', 'EmployeesLeavesController::index');
         // $routes->get('all', 'EmployeesLeaves::index');
-        $routes->get('add', 'EmployeesLeaves::add');
-        $routes->get('edit', 'EmployeesLeaves::edit');
+        $routes->get('add', 'EmployeesLeavesController::add');
+        $routes->get('edit', 'EmployeesLeavesController::edit');
     });
 });
 
 
 $routes->group('pricings', static function ($routes) {
-    $routes->get('/', 'Pricings::index');
+    $routes->get('/', 'PricingsController::index');
     // $routes->get('all', 'Pricings::index');
-    $routes->get('add', 'Pricings::add');
-    $routes->get('edit', 'Pricings::edit');
+    $routes->get('add', 'PricingsController::add');
+    $routes->get('edit', 'PricingsController::edit');
 });
 
 $routes->group('profile', static function ($routes) {
-    $routes->get('/', 'Profile::index');
+    $routes->get('/', 'ProfileController::index');
     // $routes->get('profile', 'Profile::index');
-    $routes->get('edit', 'Profile::edit');
+    $routes->get('edit', 'ProfileController::edit');
 });
 
 $routes->group('reports', static function ($routes) {
-    $routes->get('/', 'Reports::expenses');
-    $routes->get('expenses', 'Reports::expenses');
-    $routes->get('invoices', 'Reports::invoices');
+    $routes->get('/', 'ReportsController::expenses');
+    $routes->get('expenses', 'ReportsController::expenses');
+    $routes->get('invoices', 'ReportsController::invoices');
 });
 
 $routes->group('rooms', static function ($routes) {
-    $routes->get('/', 'Rooms::index');
+    $routes->get('/', 'RoomsController::index');
     // $routes->get('all', 'Rooms::index');
-    $routes->get('add', 'Rooms::add');
-    $routes->get('edit', 'Rooms::edit');
+    $routes->get('add', 'RoomsController::add');
+    $routes->get('edit', 'RoomsController::edit');
 });
 
 
 $routes->group('blogs', static function ($routes) {
-    $routes->get('/', 'Blogs::index');
+    $routes->get('/', 'BlogsController::index');
     // $routes->get('all', 'Blogs::index');
-    $routes->get('add', 'Blogs::add');
-    $routes->get('edit', 'Blogs::edit');
-    $routes->get('blog', 'Blogs::blog');
-    $routes->get('delete', 'Blogs::delete');
+    $routes->get('add', 'BlogsController::add');
+    $routes->get('edit', 'BlogsController::edit');
+    $routes->get('blog', 'BlogsController::blog');
+    $routes->get('delete', 'BlogsController::delete');
 });
 
 
 $routes->group('staffs', static function ($routes) {
     $routes->get('/', 'Staffs::index');
     // $routes->get('all', 'Staffs::index');
-    $routes->get('add', 'Staffs::add');
-    $routes->get('edit', 'Staffs::edit');
+    $routes->get('add', 'StaffsController::add');
+    $routes->get('edit', 'StaffsController::edit');
 });
 
 
 $routes->group('settings', static function ($routes) {
-    $routes->get('/', 'Settings::index');
+    $routes->get('/', 'SettingsController::index');
     // $routes->get('setting', 'Settings::index');
-    $routes->get('change-password', 'Settings::changePassword');
-    $routes->get('email', 'Settings::email');
-    $routes->get('invoice', 'Settings::invoice');
-    $routes->get('localisation', 'Settings::localisation');
-    $routes->get('notification', 'Settings::notification');
-    $routes->get('roles-permission', 'Settings::rolesPermission');
-    $routes->get('salary', 'Settings::salary');
-    $routes->get('theme', 'Settings::theme');
+    $routes->get('change-password', 'SettingsController::changePassword');
+    $routes->get('email', 'SettingsController::email');
+    $routes->get('invoice', 'SettingsController::invoice');
+    $routes->get('localisation', 'SettingsController::localisation');
+    $routes->get('notification', 'SettingsController::notification');
+    $routes->get('roles-permission', 'SettingsController::rolesPermission');
+    $routes->get('salary', 'SettingsController::salary');
+    $routes->get('theme', 'SettingsController::theme');
 });
 /*
  * --------------------------------------------------------------------
