@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class UsersController extends BaseController
+class UserController extends BaseController
 {
     public function index()
     {
@@ -15,4 +15,5 @@ class UsersController extends BaseController
     {
         echo view('profile/edit');
     }
+
 }

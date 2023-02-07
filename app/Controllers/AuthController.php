@@ -8,6 +8,7 @@ class AuthController extends BaseController
 {
     public function index()
     {
+        
         echo view('auth/login');
     }
 
@@ -20,7 +21,7 @@ class AuthController extends BaseController
     {
         echo view('auth/logout');
     }
-
+    
     public function forgetPassword()
     {
         echo view('auth/forget_password');

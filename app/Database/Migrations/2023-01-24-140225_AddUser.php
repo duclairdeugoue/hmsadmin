@@ -24,6 +24,10 @@ class AddUser extends Migration
                 'type' => 'VARCHAR',
                 'constraint' => '255',
             ],
+            'user_role' => [
+                'type'  => "ENUM('admin','customer')",
+                'null'  => false
+            ],
             'user_password' => [
                 'type' => 'VARCHAR',
                 'constraint' => '255',
