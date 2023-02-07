@@ -24,11 +24,11 @@
           <div class="login-right">
             <div class="login-right-wrap">
               <?= $this->renderSection('content') ?>
-              <?php if (url_is('/')) : ?>
+              <?php if (url_is('/auth')) : ?>
                 <div class="text-center forgotpass"><a href="<?= base_url() ?>/auth/forget_password">Forgot Password?</a> </div>
               <?php endif ?>
 
-              <?php if (url_is('/') || url_is('/auth/register')) : ?>
+              <?php if (url_is('/auth') || url_is('/auth/register')) : ?>
                 <div class="login-or"> <span class="or-line"></span> <span class="span-or">or</span> </div>
                 <div class="social-login">
                   <span>Login with</span>
@@ -45,7 +45,7 @@
                 <div class="text-center dont-have">Already have an account? <a href="<?= base_url() ?>/auth">Login</a> </div>
               <?php endif ?>
 
-              <?php if (url_is('/')) : ?>
+              <?php if (url_is('/auth')) : ?>
                 <div class="text-center dont-have">Don’t have an account? <a href="<?= base_url() ?>/auth/register">Register</a></div>
               <?php endif ?>
 
