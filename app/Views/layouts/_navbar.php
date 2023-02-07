@@ -79,9 +79,9 @@
             <p class="text-muted mb-0">Administrator</p>
           </div>
         </div>
-        <a class="dropdown-item" href="<?= base_url() ?>/profile/profile">My Profile</a>
-        <a class="dropdown-item" href="<?= base_url() ?>/settings/setting">Account Settings</a>
-        <a class="dropdown-item" href="<?= base_url() ?>/auth/login">Logout</a>
+        <a class="dropdown-item" href="<?= base_url() ?>/profile">My Profile</a>
+        <a class="dropdown-item" href="<?= base_url() ?>/settings">Account Settings</a>
+        <a class="dropdown-item" href="<?= base_url() ?>/auth">Logout</a>
       </div>
     </li>
   </ul>
