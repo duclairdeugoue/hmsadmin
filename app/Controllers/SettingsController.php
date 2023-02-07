@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Activities extends BaseController
+class SettingsController extends BaseController
 {
     public function index()
     {
-        echo view('activities/activities');
+        //
     }
 }

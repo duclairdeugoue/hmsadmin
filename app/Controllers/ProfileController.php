@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Profile extends BaseController
+class ProfileController extends BaseController
 {
     public function index()
     {

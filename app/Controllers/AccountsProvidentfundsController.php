@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class AccountsProvidentfunds extends BaseController
+class AccountsProvidentfundsController extends BaseController
 {
     public function index()
     {

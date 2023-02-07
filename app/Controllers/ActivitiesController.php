@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Sharing extends BaseController
+class ActivitiesController extends BaseController
 {
     public function index()
     {
-        //
+        echo view('activities/activities');
     }
 }

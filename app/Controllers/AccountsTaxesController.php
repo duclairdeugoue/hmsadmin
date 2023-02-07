@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class AccountsTaxes extends BaseController
+class AccountsTaxesController extends BaseController
 {
     public function index()
     {

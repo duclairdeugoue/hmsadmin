@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class EmployeesAttendance extends BaseController
+class EmployeesAttendanceController extends BaseController
 {
     public function index()
     {

@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class EmployeesHolidays extends BaseController
+class EmployeesHolidaysController extends BaseController
 {
     public function index()
     {

@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Reports extends BaseController
+class ReportsController extends BaseController
 {
     public function expenses()
     {

@@ -4,10 +4,10 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Dashboard extends BaseController
+class CalenderController extends BaseController
 {
     public function index()
     {
-        echo view('dashboard/dashboard');
+        echo view('calender/calender');
     }
 }

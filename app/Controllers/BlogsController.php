@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Blogs extends BaseController
+class BlogsController extends BaseController
 {
     public function index()
     {

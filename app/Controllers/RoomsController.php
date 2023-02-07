@@ -4,20 +4,20 @@ namespace App\Controllers;
 
 use App\Controllers\BaseController;
 
-class Pricings extends BaseController
+class RoomsController extends BaseController
 {
     public function index()
     {
-        echo view('pricings/all');
+        echo view('rooms/all');
     }
 
     public function add()
     {
-        echo view('pricings/add');
+        echo view('rooms/add');
     }
 
     public function edit()
     {
-        echo view('pricings/edit');
+        echo view('rooms/edit');
     }
 }
