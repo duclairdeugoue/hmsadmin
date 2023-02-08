@@ -40,7 +40,7 @@ $routes->set404Override(static function () {
 
 
 $routes->group('auth', ["filter" => "noauth"], static function ($routes) {
-    $routes->match(['get', 'post'], '/', 'AuthController::index');
+    $routes->match(['get', 'post'], '/', 'AuthController::login');
     $routes->get('register', 'AuthController::register');
     $routes->get('forget_password', 'AuthController::forgetPassword');
     $routes->get('logout', 'AuthController::logout');
