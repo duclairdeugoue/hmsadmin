@@ -39,18 +39,18 @@ $routes->set404Override(static function () {
 // route since we don't have to scan directories.
 
 
-$routes->group('auth', static function ($routes) {
-    $routes->get('/', 'AuthController::index');
+$routes->group('auth', ["filter" => "noauth"], static function ($routes) {
+    $routes->match(['get', 'post'], '/', 'AuthController::index');
     $routes->get('register', 'AuthController::register');
-    $routes->get('logout', 'AuthController::logout');
     $routes->get('forget_password', 'AuthController::forgetPassword');
+    $routes->get('logout', 'AuthController::logout');
 });
 
-$routes->group('dashboard', static function ($routes) {
+$routes->group('dashboard', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'DashboardController::index');
 });
 
-$routes->group('accounts', static function ($routes) {
+$routes->group('accounts', ["filter" => "auth"], static function ($routes) {
     $routes->group('expenses', static function ($routes) {
         $routes->get('/', 'AccountsController::viewExpense');
         $routes->get('add', 'AccountsController::addExpense');
@@ -82,29 +82,29 @@ $routes->group('accounts', static function ($routes) {
     });
 });
 
-$routes->group('activities', static function ($routes) {
+$routes->group('activities', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'ActivitiesController::index');
 });
 
 
-$routes->group('bookings', static function ($routes) {
+$routes->group('bookings', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'BookingsController::index');
     $routes->get('add', 'BookingsController::addBooking');
     $routes->get('edit', 'BookingsController::editBooking');
 });
 
-$routes->group('calender', static function ($routes) {
+$routes->group('calender', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'CalenderController::index');
 });
 
-$routes->group('customers', static function ($routes) {
+$routes->group('customers', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'CustomersController::index');
     $routes->get('add', 'CustomersController::addCustomer');
     $routes->get('edit', 'CustomersController::editCustomer');
 });
 
 
-$routes->group('employees', static function ($routes) {
+$routes->group('employees', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'EmployeesController::index');
     $routes->get('add', 'EmployeesController::addEmployee');
     $routes->get('edit', 'EmployeesController::editEmployee');
@@ -130,31 +130,31 @@ $routes->group('employees', static function ($routes) {
 });
 
 
-$routes->group('pricings', static function ($routes) {
+$routes->group('pricings', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'PricingsController::index');
     $routes->get('add', 'PricingsController::addPricing');
     $routes->get('edit', 'PricingsController::editPricing');
 });
 
-$routes->group('users', static function ($routes) {
+$routes->group('users', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'UsersController::index');
     $routes->get('profile', 'UserController::editProfile');
 });
 
-$routes->group('reports', static function ($routes) {
+$routes->group('reports', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'ReportsController::expenses');
     $routes->get('expenses', 'ReportsController::expenses');
     $routes->get('invoices', 'ReportsController::invoices');
 });
 
-$routes->group('rooms', static function ($routes) {
+$routes->group('rooms', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'RoomsController::index');
     $routes->get('add', 'RoomsController::addRooms');
     $routes->get('edit', 'RoomsController::editRooms');
 });
 
 
-$routes->group('blogs', static function ($routes) {
+$routes->group('blogs', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'BlogsController::index');
     $routes->get('add', 'BlogsController::addBlog');
     $routes->get('edit', 'BlogsController::editBlog');
@@ -163,14 +163,14 @@ $routes->group('blogs', static function ($routes) {
 });
 
 
-$routes->group('staffs', static function ($routes) {
+$routes->group('staffs', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'Staffs::index');
     $routes->get('add', 'StaffsController::addStaff');
     $routes->get('edit', 'StaffsController::editStaff');
 });
 
 
-$routes->group('settings', static function ($routes) {
+$routes->group('settings', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'SettingsController::index');
     $routes->get('change-password', 'SettingsController::changePassword');
     $routes->get('email', 'SettingsController::email');

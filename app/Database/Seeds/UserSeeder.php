@@ -13,18 +13,16 @@ class UserSeeder extends Seeder
 
 		$user_object->insertBatch([
 			[
-				"name" => "Rahul Sharma",
-				"email" => "rahul_sharma@mail.com",
-				"phone_no" => "7899654125",
-				"role" => "admin",
-				"password" => password_hash("12345678", PASSWORD_DEFAULT)
+				"user_name" => "Deugoue Duclair",
+				"user_email" => "duclairdeugoue@gmail.com",
+				"user_role" => "admin",
+				"user_password" => password_hash("12345678", PASSWORD_DEFAULT)
 			],
 			[
-				"name" => "Prabhat Pandey",
-				"email" => "prabhat@mail.com",
-				"phone_no" => "8888888888",
-				"role" => "editor",
-				"password" => password_hash("12345678", PASSWORD_DEFAULT)
+				"user_name" => "Tatchou Arthur",
+				"user_email" => "arthurtatchou@gmail.com",
+				"user_role" => "customer",
+				"user_password" => password_hash("12345678", PASSWORD_DEFAULT)
 			]
 		]);
 	}
