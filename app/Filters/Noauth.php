@@ -6,7 +6,7 @@ use CodeIgniter\Filters\FilterInterface;
 use CodeIgniter\HTTP\RequestInterface;
 use CodeIgniter\HTTP\ResponseInterface;
 
-class Auth implements FilterInterface
+class Noauth implements FilterInterface
 {
     /**
      * Do whatever processing this filter needs to do.
@@ -25,10 +25,16 @@ class Auth implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        if (!session()->get('isLoggedIn')) {
-            return redirect()->to(site_url('auth'));
-        }
+        if (session()->get('isLoggedIn')) {
 
+			if (session()->get('user_role') == "admin") {
+				return redirect()->to(base_url('dashboard'));
+			}
+
+			if (session()->get('user_role') == "editor") {
+				return redirect()->to(base_url('index'));
+			}
+        }
     }
 
     /**
