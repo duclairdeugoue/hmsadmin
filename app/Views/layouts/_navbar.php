@@ -70,18 +70,18 @@
       </div>
     </li>
     <li class="nav-item dropdown has-arrow">
-      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="<?= base_url() ?>/assets/img/profiles/avatar-01.jpg" width="31" alt="Soeng Souy"></span> </a>
+      <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown"> <span class="user-img"><img class="rounded-circle" src="<?= base_url() ?>/assets/img/profiles/avatar-01.jpg" width="31" alt="<?= session()->get('user_name') ?>"></span> </a>
       <div class="dropdown-menu">
         <div class="user-header">
           <div class="avatar avatar-sm"> <img src="<?= base_url() ?>/assets/img/profiles/avatar-01.jpg" alt="User Image" class="avatar-img rounded-circle"> </div>
           <div class="user-text">
-            <h6>Soeng Souy</h6>
+            <h6><?= session()->get('user_name') ?></h6>
             <p class="text-muted mb-0">Administrator</p>
           </div>
         </div>
         <a class="dropdown-item" href="<?= base_url() ?>/profile">My Profile</a>
         <a class="dropdown-item" href="<?= base_url() ?>/settings">Account Settings</a>
-        <a class="dropdown-item" href="<?= base_url() ?>/auth">Logout</a>
+        <a class="dropdown-item" href="<?= base_url() ?>/auth/logout">Logout</a>
       </div>
     </li>
   </ul>

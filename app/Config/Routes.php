@@ -39,10 +39,10 @@ $routes->set404Override(static function () {
 // route since we don't have to scan directories.
 
 
-$routes->group('auth', ["filter" => "noauth"], static function ($routes) {
-    $routes->match(['get', 'post'], '/', 'AuthController::login');
-    $routes->get('register', 'AuthController::register');
-    $routes->get('forget_password', 'AuthController::forgetPassword');
+$routes->group('auth', static function ($routes) {
+    $routes->match(['get', 'post'], '/', 'AuthController::login',["filter" => "noauth"]);
+    $routes->get('register', 'AuthController::register',["filter" => "noauth"]);
+    $routes->get('forget_password', 'AuthController::forgetPassword',["filter" => "noauth"]);
     $routes->get('logout', 'AuthController::logout');
 });
 
