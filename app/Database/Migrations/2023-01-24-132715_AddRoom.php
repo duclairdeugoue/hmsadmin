@@ -61,9 +61,10 @@ class AddRoom extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('roomcategory_id','roomcategories','id', 'CASCADE','CASCADE');
-        $this->forge->addForeignKey('roomfood_id','roomfoods','id', 'CASCADE','CASCADE');
-        $this->forge->addForeignKey('roomcancelationcharges_id','roomcancelationcharges','id', 'CASCADE','CASCADE');
+
+        // $this->forge->addForeignKey('roomcategory_id','roomcategories','id', 'CASCADE','CASCADE');
+        // $this->forge->addForeignKey('roomfood_id','roomfoods','id', 'CASCADE','CASCADE');
+        // $this->forge->addForeignKey('roomcancelationcharges_id','roomcancelationcharges','id', 'CASCADE','CASCADE');
         $this->forge->createTable('rooms');
     }
 
