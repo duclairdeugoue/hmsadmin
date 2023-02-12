@@ -14,10 +14,19 @@ class RoomModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = [];
+    protected $allowedFields    = [
+        'number',
+        'roomcategory_id',
+        'ac',
+        'roomfood_id',
+        'bedcount',
+        'roomcancelationcharges_id',
+        'price',
+        'image'
+    ];
 
     // Dates
-    protected $useTimestamps = false;
+    protected $useTimestamps = true;
     protected $dateFormat    = 'datetime';
     protected $createdField  = 'created_at';
     protected $updatedField  = 'updated_at';
