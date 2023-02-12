@@ -20,7 +20,7 @@ class AddRoom extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '100',
             ],
-            'category_id' => [
+            'roomcategory_id' => [
                 'type' => 'int',
                 'null' => true,
             ],
@@ -28,7 +28,7 @@ class AddRoom extends Migration
                 'type'  => "ENUM('AC','NO AC')",
                 'null'  => false
             ],
-            'food_id' => [
+            'roomfood_id' => [
                 'type' => 'int',
                 'null' => true,
             ],
@@ -36,7 +36,7 @@ class AddRoom extends Migration
                 'type'       => 'INT',
                 'constraint' => '100',
             ],
-            'cancelation_charges_id' => [
+            'roomcancelationcharges_id' => [
                 'type'       => 'INT',
                 'constraint' => '20',
                 'null' => true,
@@ -61,9 +61,9 @@ class AddRoom extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
-        $this->forge->addForeignKey('category_id','roomcategories','id', 'CASCADE','CASCADE');
-        $this->forge->addForeignKey('food_id','roomfoods','id', 'CASCADE','CASCADE');
-        $this->forge->addForeignKey('cancelation_charges_id','roomcancelationcharges','id', 'CASCADE','CASCADE');
+        $this->forge->addForeignKey('roomcategory_id','roomcategories','id', 'CASCADE','CASCADE');
+        $this->forge->addForeignKey('roomfood_id','roomfoods','id', 'CASCADE','CASCADE');
+        $this->forge->addForeignKey('roomcancelationcharges_id','roomcancelationcharges','id', 'CASCADE','CASCADE');
         $this->forge->createTable('rooms');
     }
 
