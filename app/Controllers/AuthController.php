@@ -29,22 +29,26 @@ class AuthController extends BaseController
                 return view('auth/login', [
                     "validation" => $this->validator,
                 ]);
-
             } else {
-                $model = new UserModel();
-
-                $user = $model->where('user_email', $this->request->getVar('user_email'))
-                    ->first();
+                try {
+                    $model = new UserModel();
+                    $user = $model->where('user_email', $this->request->getVar('user_email'))
+                        ->first();
+                } catch (\Throwable $th) {
+                    echo $th;
+                    // return view('auth/login', [
+                    //     "validation" => "No connnection to the DB"
+                    // ]);
+                }
 
                 // Stroing session values
                 $this->setUserSession($user);
 
                 // Redirecting to dashboard after login
-                if($user['user_role'] == "admin"){
+                if ($user['user_role'] == "admin") {
 
                     return redirect()->to(base_url('/dashboard'));
-
-                }elseif($user['role'] == "customer"){
+                } elseif ($user['user_role'] == "customer") {
 
                     return redirect()->to(base_url('/index'));
                 }
@@ -79,7 +83,7 @@ class AuthController extends BaseController
 
         return redirect()->to('auth');
     }
-    
+
     public function forgetPassword()
     {
         echo view('auth/forget_password');
