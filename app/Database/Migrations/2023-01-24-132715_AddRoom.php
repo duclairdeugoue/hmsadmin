@@ -39,6 +39,8 @@ class AddRoom extends Migration
             'cancelation_charges_id' => [
                 'type'       => 'INT',
                 'constraint' => '20',
+                'null' => true,
+
             ],
             'price' => [
                 'type'       => 'INT',
@@ -46,10 +48,6 @@ class AddRoom extends Migration
             ],
             'image' => [
                 'type'       => 'VARCHAR',
-                'constraint' => '200',
-            ],
-            'message' => [
-                'type'       => 'TEXT',
                 'constraint' => '200',
             ],
             'created_at' => [
@@ -63,6 +61,9 @@ class AddRoom extends Migration
             ],
         ]);
         $this->forge->addKey('id', true);
+        $this->forge->addForeignKey('category_id','roomcategories','id', 'CASCADE','CASCADE');
+        $this->forge->addForeignKey('food_id','roomfoods','id', 'CASCADE','CASCADE');
+        $this->forge->addForeignKey('cancelation_charges_id','roomcancelationcharges','id', 'CASCADE','CASCADE');
         $this->forge->createTable('rooms');
     }
 

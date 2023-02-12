@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-md-4">
                         <div class="form-group">
-                            <label>Room Type</label>
+                            <label>Room Category</label>
                             <select class="form-control" id="sel1" name="sellist1">
                                 <option>Select</option>
                                 <option>Single</option>
@@ -94,9 +94,7 @@
                             <label>Price</label>
                             <input type="number" class="form-control" id="usr">
                         </div>
-                    </div>
-                    <!-- <div class="col-md-4">
-          
+                    </div>          
                     <div class="col-md-4">
                         <div class="form-group">
                             <label>File Upload</label>
