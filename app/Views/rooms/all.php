@@ -32,10 +32,7 @@
                   <th>AC/NO AC</th>
                   <th>Bed Counts</th>
                   <th>Charges for cancelation</th>
-                  <th>Depature Date</th>
-                  <th>Ph.Number</th>
                   <th>Status</th>
-                  <th>Message</th>
                   <th class="text-right">Actions</th>
                 </tr>
               </thead>
@@ -47,11 +44,8 @@
                   <td>AC</td>
                   <td>5</td>
                   <td>$100</td>
-                  <td>23-01-2020</td>
-                  <td>23-03-2020</td>
-                  <td>631-254-6480</td>
-                  <td>
-                    <div class="actions"> <a href="#" class="btn btn-sm bg-danger-light mr-2">Occupied</a> </div>
+                      <td>
+                    <div class="actions"> <a href="#" class="btn btn-sm bg-danger-light mr-2">Unavailable</a> </div>
                   </td>
                   <td class="text-right">
                     <div class="dropdown dropdown-action"> <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
@@ -66,11 +60,8 @@
                   <td>AC</td>
                   <td>5</td>
                   <td>$100</td>
-                  <td>23-01-2020</td>
-                  <td>23-03-2020</td>
-                  <td>631-254-6480</td>
                   <td>
-                    <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2">Free</a> </div>
+                    <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2">Available</a> </div>
                   </td>
                   <td class="text-right">
                     <div class="dropdown dropdown-action"> <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
@@ -85,11 +76,8 @@
                   <td>AC</td>
                   <td>5</td>
                   <td>$100</td>
-                  <td>23-01-2020</td>
-                  <td>23-03-2020</td>
-                  <td>631-254-6480</td>
                   <td>
-                    <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2">Free</a> </div>
+                    <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2">Available</a> </div>
                   </td>
                   <td class="text-right">
                     <div class="dropdown dropdown-action"> <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
@@ -104,11 +92,8 @@
                   <td>AC</td>
                   <td>5</td>
                   <td>$100</td>
-                  <td>23-01-2020</td>
-                  <td>23-03-2020</td>
-                  <td>631-254-6480</td>
                   <td>
-                    <div class="actions"> <a href="#" class="btn btn-sm bg-danger-light mr-2">Occupied</a> </div>
+                    <div class="actions"> <a href="#" class="btn btn-sm bg-danger-light mr-2">Unavailable</a> </div>
                   </td>
                   <td class="text-right">
                     <div class="dropdown dropdown-action"> <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>
@@ -123,11 +108,9 @@
                   <td>AC</td>
                   <td>5</td>
                   <td>$100</td>
-                  <td>23-01-2020</td>
-                  <td>23-03-2020</td>
-                  <td>631-254-6480</td>
+
                   <td>
-                    <div class="actions"> <a href="#" class="btn btn-sm bg-danger-light mr-2">Occupied</a> </div>
+                    <div class="actions"> <a href="#" class="btn btn-sm bg-danger-light mr-2">Unavailable</a> </div>
                   </td>
                   <td class="text-right">
                     <div class="dropdown dropdown-action"> <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fas fa-ellipsis-v ellipse_color"></i></a>

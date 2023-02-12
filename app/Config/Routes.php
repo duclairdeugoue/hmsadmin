@@ -149,8 +149,8 @@ $routes->group('reports', ["filter" => "auth"], static function ($routes) {
 
 $routes->group('rooms', ["filter" => "auth"], static function ($routes) {
     $routes->get('/', 'RoomsController::index');
-    $routes->get('add', 'RoomsController::addRooms');
-    $routes->get('edit', 'RoomsController::editRooms');
+    $routes->get('add', 'RoomsController::addRoom');
+    $routes->get('edit', 'RoomsController::editRoom');
 });
 
 
