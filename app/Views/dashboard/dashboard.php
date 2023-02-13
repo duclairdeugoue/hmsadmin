@@ -156,8 +156,8 @@
                                         <td><?= $booking['time'] ?></td>
                                         <td><?= $booking['arival_date'] ?></td>
                                         <td><?= $booking['departure_date'] ?></td>
-                                        <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2652494b4b5f44435448474a66435e474b564a430845494b">[email&#160;protected]</a></td>
-                                        <td>631-254-6480</td>
+                                        <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2652494b4b5f44435448474a66435e474b564a430845494b"><?= $booking['email']?></a></td>
+                                        <td>631-<?= $booking['phone_number']?></td>
                                         <td>
                                             <?php if ($booking['status'] == 'active') : ?>
                                                 <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2"><?= $booking['status'] ?></a> </div>

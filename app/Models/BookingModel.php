@@ -52,6 +52,13 @@ class BookingModel extends Model
 
 
     public function getAllBookings() {
-        return $this->findAll();
+        return $this->db->table('bookings t1')
+        ->join('roomcategories t2', 't2.id = t1.roomcategory_id')
+        ->join('customers t3', 't3.id = t1.customer_id')
+        ->get()
+        ->getResultArray();
+        // return $this->findAll();
     }
+
+
 }

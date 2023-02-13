@@ -13,6 +13,10 @@
         <div class="row align-items-center">
             <div class="col">
                 <div class="mt-5">
+                <pre>
+
+                    <?php  //echo print_r($bookingsData[1]) ?>
+                </pre>
                     <h4 class="card-title float-left mt-2">Bookings</h4>
                     <a href="add-booking.html" class="btn btn-primary float-right veiwbutton ">Add Booking</a>
                 </div>
@@ -48,17 +52,17 @@
                                     <td>
                                         <h2 class="table-avatar">
                                             <!-- <a href="profile.html" class="avatar avatar-sm mr-2"><img class="avatar-img rounded-circle" src="<?= base_url() ?>/assets/img/profiles/avatar-03.jpg" alt="User Image"></a> -->
-                                            <a href="profile.html"> <span>#<?= $booking['customer_id']?></span></a>
+                                            <a href="profile.html"> <span>#<?= $booking['name']?></span></a>
                                         </h2>
                                     </td>
-                                    <td><?= $booking['roomcategory_id']?></td>
+                                    <td><?= $booking['name']?></td>
                                     <td><?= $booking['total_members']?></td>
                                     <td><?= $booking['date']?></td>
                                     <td><?= $booking['time']?></td>
                                     <td><?= $booking['arival_date']?></td>
                                     <td><?= $booking['departure_date']?></td>
-                                    <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2652494b4b5f44435448474a66435e474b564a430845494b">[email&#160;protected]</a></td>
-                                    <td>631-254-6480</td>
+                                    <td><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2652494b4b5f44435448474a66435e474b564a430845494b"><?= $booking['email']?></a></td>
+                                    <td><?= $booking['phone_number']?></td>
                                     <td>
                                         <?php if($booking['status'] == 'active'): ?>
                                         <div class="actions"> <a href="#" class="btn btn-sm bg-success-light mr-2"><?= $booking['status']?></a> </div>
