@@ -18,7 +18,7 @@
                     <?php  //echo print_r($bookingsData[1]) ?>
                 </pre>
                     <h4 class="card-title float-left mt-2">Bookings</h4>
-                    <a href="add-booking.html" class="btn btn-primary float-right veiwbutton ">Add Booking</a>
+                    <a href="<?= base_url('bookings/add')?>" class="btn btn-primary float-right veiwbutton ">Add Booking</a>
                 </div>
             </div>
         </div>
