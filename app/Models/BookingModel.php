@@ -15,6 +15,7 @@ class BookingModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
+        'id',
         'customer_id',
         'roomcategory_id',
         'total_members',
@@ -48,4 +49,9 @@ class BookingModel extends Model
     protected $afterFind      = [];
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
+
+
+    public function getAllBookings() {
+        return $this->findAll();
+    }
 }

@@ -3,16 +3,30 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-
+use App\Models\BookingModel;
 
 /**
  * Summary of BookingsController
  */
 class BookingsController extends BaseController
 {
+    public $bookingsData = [];
+
     public function index()
     {
-        echo view('bookings/all');
+
+        $bookingModel = new BookingModel();
+        try {
+            $this->bookingsData = $bookingModel->getAllBookings();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+
+        $data = [
+            'bookingsData'  => $this->bookingsData
+        ];
+
+        echo view('bookings/all', $data);
     }
     public function addBooking()
     {

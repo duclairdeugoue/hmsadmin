@@ -3,9 +3,12 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
+use App\Models\BookingModel;
 
 class DashboardController extends BaseController
 {
+    public $bookingsData = [];
+
     public function __construct()
     {
         if (session()->get('user_role') != "admin") {
@@ -16,6 +19,17 @@ class DashboardController extends BaseController
 
     public function index()
     {
-        echo view('dashboard/dashboard');
+        $bookingModel = new BookingModel();
+        try {
+            $this->bookingsData = $bookingModel->getAllBookings();
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
+
+        $data = [
+            'bookingsData'  => $this->bookingsData
+        ];
+
+        echo view('dashboard/dashboard', $data);
     }
 }
