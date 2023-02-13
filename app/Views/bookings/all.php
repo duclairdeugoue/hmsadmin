@@ -30,7 +30,7 @@
                                     <th>Booking ID</th>
                                     <th>Customer Name</th>
                                     <th>Room Category</th>
-                                    <th>Total Numbers</th>
+                                    <th>Total Members</th>
                                     <th>Date</th>
                                     <th>Time</th>
                                     <th>Arrival Date</th>
