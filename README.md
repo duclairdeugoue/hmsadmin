@@ -48,13 +48,19 @@ git checkout -b [branch-name]
 
 7 - Open your phpMyAdmin in XAMPP, WAMPP or MAMP and and create a db named `hms_db` , make sure your user is `hms_admin` and his password is  `hms_admin` by creating this user and granting all permission.
 
-8 - Go back to source IDE and type the command below to apply migrate the migrations
+8 - Go back to your IDE open the project  and type the command below to apply migrate the migrations
 
 ```php
 php spark migrate
 ```
 
-9 - Finally launch the application using the command
+9 - Now to add default data in the application, we will have to seed data inside with the command
+
+```bash
+php spark db:seed ManageSeeder
+```
+
+10 - Finally launch the application using the command
 
 ```php
 php spark serve
