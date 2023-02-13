@@ -46,6 +46,10 @@ class AddRoom extends Migration
                 'type'       => 'INT',
                 'constraint' => '100',
             ],
+            'status' => [
+                'type'      => "ENUM('unavailable', 'available')",
+                'default'   => "unavailable"    
+            ],
             'image' => [
                 'type'       => 'VARCHAR',
                 'constraint' => '200',

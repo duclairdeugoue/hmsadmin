@@ -22,6 +22,7 @@ class RoomModel extends Model
         'bedcount',
         'roomcancelationcharges_id',
         'price',
+        'status',
         'image'
     ];
 
