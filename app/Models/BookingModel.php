@@ -15,7 +15,14 @@ class BookingModel extends Model
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
     protected $allowedFields    = [
-        
+        'customer_id',
+        'roomcategory_id',
+        'total_members',
+        'date',
+        'time',
+        'arival_date',
+        'departure_date',
+        'status'
     ];
 
     // Dates
