@@ -7,14 +7,12 @@
         <li class="submenu"> <a href="<?= base_url() ?>/bookings"><i class="fas fa-suitcase"></i> <span> Booking </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a class="<?php if (url_is('/bookings')) : ?>active<?php endif ?>" href="<?= base_url() ?>/bookings"> All Booking </a></li>
-            <li><a class="<?php if (url_is('/bookings/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/bookings/edit"> Edit Booking </a></li>
             <li><a class="<?php if (url_is('/bookings/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/bookings/add"> Add Booking </a></li>
           </ul>
         </li>
         <li class="submenu"> <a href="<?= base_url() ?>/customers"><i class="fas fa-user"></i> <span> Customers </span> <span class="menu-arrow"></span></a>
           <ul class="submenu_class" style="display: none;">
             <li><a class="<?php if (url_is('/customers')) : ?>active<?php endif ?>" href="<?= base_url() ?>/customers"> All customers </a></li>
-            <li><a class="<?php if (url_is('/customers/edit')) : ?>active<?php endif ?>" href="<?= base_url() ?>/customers/edit"> Edit Customer </a></li>
             <li><a class="<?php if (url_is('/customers/add')) : ?>active<?php endif ?>" href="<?= base_url() ?>/customers/add"> Add Customer </a></li>
           </ul>
         </li>
